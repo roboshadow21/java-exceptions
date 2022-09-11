@@ -16,7 +16,16 @@ public class lesson_1 {
 
         int[] arr1 = {5, 6, 4};
         int[] arr2 = {3, 2, 2, 7};
-        System.out.println(Arrays.toString(arraysDiff(arr1, arr2)));
+
+        System.out.println(Arrays.toString(arraysDifference(arr1, arr2)));
+
+//        Реализуйте метод, принимающий в качестве аргументов два целочисленных массива, и возвращающий новый массив,
+//        каждый элемент которого равен частному элементов двух входящих массивов в той же ячейке. Если длины
+//        массивов не равны, необходимо как-то оповестить пользователя. Важно: При выполнении метода единственное
+//        исключение, которое пользователь может увидеть - RuntimeException, т.е. ваше.
+
+        System.out.println(Arrays.toString(arraysDivision(arr1, arr2)));
+
     }
 
     public static int test1(int x, int y) {
@@ -26,13 +35,14 @@ public class lesson_1 {
         }
         return res;
     }
+
     public static int[] test2(int num) {
         if (num < 0) {
             throw new NegativeArraySizeException("Array size should be positive!");
         }
-        int[] arr = new int[num];
-        return arr;
+        return new int[num];
     }
+
     public static Character test3(String arg) {
         if (arg.length() < 5) {
             throw new StringIndexOutOfBoundsException("String length should be more then 4");
@@ -40,7 +50,7 @@ public class lesson_1 {
         return arg.charAt(5);
     }
 
-    public static int[] arraysDiff(int[] arr1, int[] arr2) {
+    public static int[] arraysDifference(int[] arr1, int[] arr2) {
         int[] resultArr = new int[arr1.length];
         int sum = 0;
         if (arr1.length != arr2.length) {
@@ -48,6 +58,22 @@ public class lesson_1 {
         }
         for (int i = 0; i < arr1.length; i++) {
             resultArr[i] = arr1[i] - arr2[i];
+        }
+        return resultArr;
+    }
+
+    public static int[] arraysDivision(int[] arr1, int[] arr2) {
+        int[] resultArr = new int[arr1.length];
+        int sum = 0;
+        if (arr1.length != arr2.length) {
+            throw new RuntimeException("Arrays length should be equal!");
+        }
+        try {
+            for (int i = 0; i < arr1.length; i++) {
+                resultArr[i] = arr1[i] / arr2[i];
+            }
+        } catch (RuntimeException e) {
+            System.out.printf("Something goes wrong! - %s", e.getClass().getSimpleName());
         }
         return resultArr;
     }
