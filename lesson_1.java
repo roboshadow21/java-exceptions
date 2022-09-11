@@ -6,8 +6,8 @@ public class lesson_1 {
     public static void main(String[] args) {
         //    Реализуйте 3 метода, чтобы в каждом из них получить разные исключения
         System.out.println(test1(2, -3));
-//        System.out.println(Arrays.toString(test2(-3)));
-//        System.out.println(test3("asd456"));
+        System.out.println(Arrays.toString(test2(-3)));
+        System.out.println(test3("asd4"));
     }
 
     public static int test1(int x, int y) {
@@ -19,7 +19,7 @@ public class lesson_1 {
     }
     public static int[] test2(int num) {
         if (num < 0) {
-            throw new NegativeArraySizeException("Number should be positive!");
+            throw new NegativeArraySizeException("Array size should be positive!");
         }
         int[] arr = new int[num];
         return arr;
