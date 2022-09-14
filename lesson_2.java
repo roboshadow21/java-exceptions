@@ -12,7 +12,23 @@ public class lesson_2 {
 
         System.out.println(returnDoubleNumber());
 
-    }
+//    Если необходимо, исправьте данный код (задание 2
+//    https://docs.google.com/document/d/17EaA1lDxzD5YigQ5OAal60fOFKVoCbEJqooB9XfhT7w/edit)
+
+        int[] intArray = {1, 2, 6, 4};
+        try {
+            int d = 0;
+            double catchedRes1 = (double) intArray[8] / d;
+            System.out.println("catchedRes1 = " + catchedRes1);
+        } catch (ArithmeticException | ArrayIndexOutOfBoundsException | NullPointerException | ClassCastException e) {
+            System.out.println("Catching exception: " + e);
+
+        }
+
+
+
+  }
+
     public static Double returnDoubleNumber() {
 
         Scanner scan = new Scanner(System.in);
@@ -23,4 +39,5 @@ public class lesson_2 {
         }
         return scan.nextDouble();
     }
+
 }
