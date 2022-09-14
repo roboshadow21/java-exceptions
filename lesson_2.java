@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class lesson_2 {
 
     public static void main(String[] args) {
-        System.out.println(returnFloatNumber());
+        System.out.println(returnDoubleNumber());
 
     }
-    public static float returnFloatNumber() {
+    public static Double returnDoubleNumber() {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter number: ");
-        while (!scan.hasNextFloat()) {
+        while (!scan.hasNextDouble()) {
             System.out.println("Error! Enter float number, separator - ',': ");
             scan.nextLine();
         }
-        return scan.nextFloat();
+        return scan.nextDouble();
     }
 }
