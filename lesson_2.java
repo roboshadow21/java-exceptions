@@ -10,8 +10,8 @@ public class lesson_2 {
 //        введенное значение. Ввод текста вместо числа не должно приводить к падению приложения, вместо этого,
 //                необходимо повторно запросить у пользователя ввод данных.
 
-//        System.out.println(returnDoubleNumber());
-//        checkLineIsEmpty();
+        System.out.println(returnDoubleNumber());
+        checkLineIsEmpty();
 
 //    Если необходимо, исправьте данный код (задание 2
 //    https://docs.google.com/document/d/17EaA1lDxzD5YigQ5OAal60fOFKVoCbEJqooB9XfhT7w/edit)
