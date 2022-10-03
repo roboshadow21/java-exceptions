@@ -80,13 +80,29 @@ public class Person implements getUserInfo{
         return null;
     }
 
-    public String getUserFuLlInfo() {
+    @Override
+    public String getUserSex() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your sex, format -  one symbol (m or f): ");
+        String str = sc.nextLine();
+        assert false;
+        if (str.length() > 1) {
+            throw new RuntimeException("Wrong format! Enter your sex, format - one symbol!");
+        }
+        else {
+            return str;
+        }
+
+    }
+
+    public ArrayList<String> getUserFuLlInfo() {
         ArrayList<String> person = new ArrayList<>();
         person.add(getUserName());
         person.add(getUserSecondName());
         person.add(getUserSurname());
         person.add(getUserBirthDate());
         person.add(getUserPhoneNumber());
-        return person.toString();
+        person.add((getUserSex()));
+        return person;
     }
 }
